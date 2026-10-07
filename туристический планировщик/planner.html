@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Планировщик | Парки Беларуси</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a href="index.html" class="logo"> Парки Беларуси</a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+      <nav>
+        <ul class="menu" id="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="planner.html" class="active">Планировщик <span class="badge" id="badge">0</span></a></li>
+        <li><a href="routes.html">Готовые маршруты</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Планировщик</h1>
+        <p class="sub">Добавляйте объекты в маршрут, меняйте порядок и следите за временем и стоимостью.</p>
+        <div class="layout">
+          <div>
+            <div class="tabs" id="filters" role="group" aria-label="Категории"></div>
+            <div class="cards" id="cards"></div>
+          </div>
+          <aside class="route">
+            <h2>Мой маршрут</h2>
+            <label class="limit" for="limit">Лимит времени, часов <input type="number" id="limit" value="10" min="1" max="24" step="0.5"></label>
+            <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+            <p class="status" id="status" aria-live="polite"></p>
+            <ol class="steps" id="steps"></ol>
+            <div class="total">
+              <div><span>Время</span><b id="totalTime">0 ч</b></div>
+              <div><span>Стоимость</span><b id="totalCost">0 BYN</b></div>
+              <div><span>Объектов</span><b id="totalCount">0</b></div>
+            </div>
+            <button class="btn" id="clear">Очистить маршрут</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="footer-logo">Парки Беларуси</div>
+      <div>
+        <p>+375 (29) 756 88 87</p>
+        <p>hello@parks-by.example</p>
+        <p>г. Брест, ул. Вересковая, 10</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

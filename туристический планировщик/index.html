@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная | Парки Беларуси</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a href="index.html" class="logo"> Парки Беларуси</a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+      <nav>
+        <ul class="menu" id="menu">
+        <li><a href="index.html" class="active">Главная</a></li>
+        <li><a href="planner.html">Планировщик <span class="badge" id="badge">0</span></a></li>
+        <li><a href="routes.html">Готовые маршруты</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Спланируйте поездку по паркам Беларуси</h1>
+          <p class="lead">Выберите места в каталоге, соберите маршрут и сразу узнайте, сколько он займёт времени и во сколько обойдётся.</p>
+          <a href="planner.html" class="btn">Начать планирование</a>
+        </div>
+        <img src="img/hero.jpg" alt="Парк" class="hero-img">
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2>Как это работает</h2>
+        <div class="items">
+          <div class="item"><h3>Каталог объектов</h3><p>12 парков, усадеб и садов с фильтром по категориям.</p></div>
+          <div class="item"><h3>Автоматический расчёт</h3><p>Время и стоимость маршрута считаются сами при каждом изменении.</p></div>
+          <div class="item"><h3>Контроль лимита</h3><p>Если маршрут получился длиннее лимита, сервис предупредит об этом.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="band">
+      <div class="container">
+        <h2>Не хотите собирать сами?</h2>
+        <p>Загрузите готовый маршрут и измените его под себя.</p>
+        <a href="routes.html" class="btn btn-accent">Готовые маршруты</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="footer-logo">Парки Беларуси</div>
+      <div>
+        <p>+375 (29) 756 88 87</p>
+        <p>hello@parks-by.example</p>
+        <p>г. Брест, ул. Вересковая, 10</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

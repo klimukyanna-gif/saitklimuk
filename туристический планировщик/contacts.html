@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | Парки Беларуси</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a href="index.html" class="logo">Парки Беларуси</a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+      <nav>
+        <ul class="menu" id="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="planner.html">Планировщик <span class="badge" id="badge">0</span></a></li>
+        <li><a href="routes.html">Готовые маршруты</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="contacts.html" class="active">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <h1>Контакты</h1>
+          <p class="lead">Позвоните или напишите, как вам удобнее.</p>
+          <p><b>Адрес</b><br>г. Брест, ул. Вересковая, 10</p>
+          <p><b>Телефон</b><br>+375 (29) 756 88 87</p>
+          <p><b>E-mail</b><br>hello@parks-by.example</p>
+          <p><b>Часы работы</b><br>Пн–Пт, 9:00–18:00</p>
+        </div>
+        <form class="form" id="form" novalidate>
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name">
+          <label for="email">E-mail</label>
+          <input type="email" id="email">
+          <label for="msg">Сообщение</label>
+          <textarea id="msg" rows="4"></textarea>
+          <button type="submit" class="btn">Отправить</button>
+          <p id="result" class="result"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="footer-logo">Парки Беларуси</div>
+      <div>
+        <p>+375 (29) 756 88 87</p>
+        <p>hello@parks-by.example</p>
+        <p>г. Брест, ул. Вересковая, 10</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
