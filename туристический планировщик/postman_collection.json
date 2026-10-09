@@ -1,0 +1,229 @@
+{
+ "info": {
+  "name": "Парки Беларуси API",
+  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+ },
+ "variable": [
+  {
+   "key": "base",
+   "value": "http://localhost:3000"
+  }
+ ],
+ "item": [
+  {
+   "name": "Все объекты",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/places"
+   }
+  },
+  {
+   "name": "Фильтр по категории",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/places?category=Городские парки"
+   }
+  },
+  {
+   "name": "Один объект",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/places/1"
+   }
+  },
+  {
+   "name": "Категории",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/categories"
+   }
+  },
+  {
+   "name": "Создать объект",
+   "request": {
+    "method": "POST",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/places",
+    "body": {
+     "mode": "raw",
+     "raw": "{\n  \"name\": \"Новый парк\",\n  \"category\": \"Городские парки\",\n  \"image\": \"img/place1.jpg\",\n  \"hours\": 2,\n  \"price\": 5,\n  \"description\": \"Тест\"\n}"
+    }
+   }
+  },
+  {
+   "name": "Изменить объект",
+   "request": {
+    "method": "PUT",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/places/13",
+    "body": {
+     "mode": "raw",
+     "raw": "{\n  \"name\": \"Новый парк 2\",\n  \"category\": \"Городские парки\",\n  \"image\": \"img/place1.jpg\",\n  \"hours\": 3,\n  \"price\": 7,\n  \"description\": \"Изменён\"\n}"
+    }
+   }
+  },
+  {
+   "name": "Удалить объект",
+   "request": {
+    "method": "DELETE",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/places/13"
+   }
+  },
+  {
+   "name": "Готовые маршруты",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/routes?preset=1"
+   }
+  },
+  {
+   "name": "Маршрут по id",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/routes/1"
+   }
+  },
+  {
+   "name": "Сохранить маршрут (ок)",
+   "request": {
+    "method": "POST",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/routes",
+    "body": {
+     "mode": "raw",
+     "raw": "{\n  \"name\": \"Мой маршрут\",\n  \"limit\": 10,\n  \"placeIds\": [\n    5,\n    6,\n    12\n  ]\n}"
+    }
+   }
+  },
+  {
+   "name": "Сохранить маршрут (превышен лимит → 400)",
+   "request": {
+    "method": "POST",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/routes",
+    "body": {
+     "mode": "raw",
+     "raw": "{\n  \"name\": \"Слишком длинный\",\n  \"limit\": 8,\n  \"placeIds\": [\n    1,\n    3,\n    2\n  ]\n}"
+    }
+   }
+  },
+  {
+   "name": "Мои маршруты",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/routes?preset=0"
+   }
+  },
+  {
+   "name": "Удалить маршрут",
+   "request": {
+    "method": "DELETE",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/routes/5"
+   }
+  },
+  {
+   "name": "Отправить сообщение",
+   "request": {
+    "method": "POST",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/messages",
+    "body": {
+     "mode": "raw",
+     "raw": "{\n  \"name\": \"Аня\",\n  \"email\": \"anya@mail.ru\",\n  \"message\": \"Здравствуйте, хочу уточнить маршрут\"\n}"
+    }
+   }
+  },
+  {
+   "name": "Список сообщений",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "Content-Type",
+      "value": "application/json"
+     }
+    ],
+    "url": "{{base}}/api/messages"
+   }
+  }
+ ]
+}

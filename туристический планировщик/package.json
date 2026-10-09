@@ -1,0 +1,14 @@
+{
+  "name": "belarus-parks",
+  "version": "1.0.0",
+  "description": "Планировщик поездок по паркам Беларуси: Node.js + Express + SQL Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "msnodesqlv8": "^5.5.0",
+    "mssql": "^11.0.1"
+  }
+}
